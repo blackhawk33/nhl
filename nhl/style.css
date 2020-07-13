@@ -1,0 +1,216 @@
+*{
+    box-sizing: border-box;   
+  }
+body {
+    height: 100vh;
+    margin: 0;
+    background-color:rgb(245,245,245)
+ }
+#container {
+    display:grid;
+    grid-template-columns: 2% 23.5% 1% 23.5% 1% 23.5% 1% 23.5% 2%;
+    grid-template-rows: 4% auto 2% 30% 2%;
+    width: 100vw;
+    height: 100vh;
+    float: left;
+}
+.bordered {
+    border:1px solid grey;
+    box-shadow: 0 8px 6px -6px grey;
+    background-color:white;
+}
+h2 {
+    text-align:center;
+}
+#nav{
+    grid-area: 1 / 1 / 2 / 10;
+    text-align: right;
+    padding-right:5px;
+}
+#east-stand {
+    grid-area: 2 / 2 / 3 / 3
+}
+#scoreboard {
+    grid-area: 2 / 4 / 3 / 7;
+}
+#west-stand {
+    grid-area: 2 / 8 / 3 / 9;
+}
+#game1 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+#game2 {
+    grid-area: 4 / 4 / 5 / 5;
+}
+#game3 {
+    grid-area: 4 / 6 / 5 / 7;
+}
+#game4 {
+    grid-area: 4 / 8 / 5 / 9;
+}
+
+
+
+.scoreboard {
+    display:grid;
+    grid-template-columns:.9fr 1.5fr .3fr .9fr;
+    grid-template-rows:1.5fr 1.5fr .3fr 1fr;
+    grid-template-areas:
+        "alogo  onegoal onegoal hlogo"
+        "ascore time    period  hscore"
+        "asog    logo    logo    hsog"
+        "lsog   logo    logo    rsog";
+    background-color:black;
+}
+/*SCOREBOARD*/
+.name {
+    color:white;
+}
+#home-team {
+    grid-area: 1 / 4 / 5 / 5;
+    background-color:rgb(207,10,44);
+}
+#away-team {
+    grid-area: 1 / 1 / 5 / 2;
+    background-color:rgb(0,38,84);
+}
+#sb-home-name {
+    grid-area:hlogo;
+}
+#sb-home-score {
+    grid-area:hscore;
+}
+#sb-home-sog {
+    grid-area:hsog;
+}
+#sb-away-name {
+    grid-area:alogo;
+}
+#sb-away-score {
+    grid-area:ascore;
+}
+#sb-away-sog {
+    grid-area:asog;
+}
+#sb-time {
+    grid-area:time;
+    align-self:center;
+    text-align:center;
+    color:white;
+    font-size:80px;
+    font-weight:bold;
+}
+#sb-period {
+    grid-area:period;
+    font-size:40px;
+    align-self:center;
+    text-align:left;
+}
+.sb-block {
+    padding:5px 12px;
+    background-color:yellow;
+}
+.name {
+    font-size: 32px;
+    font-weight:bold;
+    text-align:center;
+}
+.score {
+    font-size:80px;
+    font-weight:bold;
+    text-align:center;
+    color:white;
+    align-self:center;
+}
+.sb-block-scores {
+    padding: 20px 40px;
+    border:2px solid white;
+    background-color:black;
+}
+
+#sb-away-sog {
+    grid-area:lsog;
+}
+#sb-home-sog {
+    grid-area:rsog;
+}
+.sog {
+    font-size:24px;
+    text-align:center;
+    font-weight:bold;
+}
+#asog {
+    grid-area:asog;
+}
+#hsog {
+    grid-area:hsog;
+}
+.shotsongoal {
+    color:white;
+    background-color:gray;
+}
+
+
+
+
+.standings {
+    width:100%;
+}
+.back {
+    text-align: right;
+}
+
+.games {
+    display:grid;
+    grid-template-columns:.8fr 3fr 1fr .1fr 1.8fr;
+    grid-template-rows:1fr 1fr 10%;
+    grid-template-areas:
+        "alogo ateam ascore divider time"
+        "hlogo hteam hscore divider time"
+        "ft ft ft ft ft";
+    padding-top:5px;
+    
+}
+
+.otherateam{
+    grid-area:ateam;
+}
+.otherhteam{
+    grid-area:hteam;
+}
+.otherbroadcast{
+    grid-area:ft;
+    text-align:right;
+    font-size:12px;
+    color:gray;
+    padding-right:10px;
+}
+.otherascore {
+    grid-area:ascore;
+}
+.otherhscore{
+    grid-area:hscore;
+}
+.othertime{
+    grid-area:time;
+    align-self:center;
+    font-size: 16px;
+    font-weight:bold;
+    text-align:center;
+}
+.otherteams {
+    align-self:center;
+    font-weight:bold;
+    font-size:22px;
+    text-align:left;
+}
+.otherscores{
+    align-self:center;
+    font-size:22px;
+    font-weight:bold;
+    text-align:center;
+}
+.divider {
+    grid-area:divider;
+    background-color:rgb(255,209,0);
+}
